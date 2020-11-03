@@ -81,25 +81,27 @@ profile:
 
 backoffice:
   sidebar:
-    dashboard: DASHBOARD
-    articles: ARTICLES
+    dashboard: ACCUEIL
+    articles: Traitemement en cours
   dashboard:
-    article: Article
+    article: File
     articles: Articles
-    comment: Commentaire
+    comment: Erreur
     comments: Commentaires
     user: Utilisateur
     users: Utilisateurs
   articles:
     list:
       title: LES ARTICLES
-      new_article: Nouvel article
+      new_article: Nouvel fichier
       article_title: Titre
       article_author: Auteur
       article_posted_at: Date poste
+      file: Fichier
+      status: Status
       article_comment: Commentaires
       articlr_action: Actions
-      no_article: Pas d'article
+      no_article: Pas de fichier 
       deleted_confirm: Voulez vous vraiment supprimer cet article ?
     add:
       title: AJOUTER UN ARTICLE

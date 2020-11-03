@@ -31,8 +31,8 @@ class Image
     /**
      * @var UploadedFile
      *
-     * @Assert\Image(
-     *     mimeTypes={"image/png", "image/jpeg"},
+     * @Assert\File(
+     *     mimeTypes={"application/csv", "application/excel","application/vnd.ms-excel", "application/vnd.msexcel","text/csv", "text/anytext", "text/plain", "text/x-c", "text/comma-separated-values","inode/x-empty","application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"},
      *     mimeTypesMessage="backoffice.article.image_extension"
      * )
      */

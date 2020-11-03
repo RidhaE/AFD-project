@@ -13,7 +13,7 @@
 
         {% include 'flashMessage/flashMessage.html.twig' %}
 
-        <hr>
+      
 
         <div class="columns">
             <div class="column">
@@ -22,40 +22,41 @@
                 </a>
             </div>
         </div>
+    
 
         <div class="columns">
             <div class="column">
+    
                 {% if articles is not empty %}
                     <div class="table-container">
                         <table class="table">
                             <thead>
-                            <th><abbr title="Titre">{{ 'backoffice.articles.list.article_title'|trans }}</abbr></th>
-                            <th><abbr title="Auteur">{{ 'backoffice.articles.list.article_author'|trans }}</abbr></th>
-                            <th><abbr title="Date poste">{{ 'backoffice.articles.list.article_posted_at'|trans }}</abbr></th>
-                            <th><abbr title="Commentaire">{{ 'backoffice.articles.list.article_comment'|trans }}</abbr></th>
-                            <th><abbr title="Actions">{{ 'backoffice.articles.list.articlr_action'|trans }}</abbr></th>
+                 
+                            <th>{{ 'backoffice.articles.list.article_author'|trans }}</th>
+                            <th>Date de création</th>
+                            <th> {{ 'backoffice.articles.list.file'|trans }}</th>
+                             <th> {{ 'backoffice.articles.list.status'|trans }}</th>
+                            <th>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{ 'backoffice.articles.list.articlr_action'|trans }}</th>
                             </thead>
 
                             <tbody>
                             {% for article in articles %}
                                 <tr>
-                                    <td>{{ article.title }}</td>
+                           
                                     <td>{{ article.author.username }}</td>
                                     <td>{{ article.createAt|date("d/m/Y") }}</td>
-                                    <td>{{ article.comments.count }}</td>
+                                    <td>{{ article.image.alt }}</td>
+                                    <td><i class="fa fa-archive" aria-hidden="true" style="color:#386ca2;font-size:30px"></i></td>
                                     <td>
-                                        <a href="{{ path('article_show', {'slug': article.slug}) }}"
-                                           class="button is-primary">
+                                        <a href="{{ path('article_show', {'slug': article.image.id}) }}"
+                                           class="button is-warning">
                                             <i class="fa fa-eye" aria-hidden="true"></i>
                                         </a>
-                                        <a href="{{ path('article_edit', {'slug': article.slug}) }}"
-                                           class="button is-warning">
-                                            <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
-                                        </a>
-                                        <a href="{{ path('article_delete', {'slug': article.slug}) }}"
-                                           class="button is-danger delete-article"
+                                 
+                                        <a href="{{ path('afb', {'slug': article.image.id}) }}"
+                                           class="button is-primary"
                                         data-trans="{{ 'backoffice.articles.list.deleted_confirm'|trans }}">
-                                            <i class="fa fa-trash-o" aria-hidden="true"></i>
+                                            <i class="fa fa-university" aria-hidden="true"></i>
                                         </a>
                                     </td>
                                 </tr>

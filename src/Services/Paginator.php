@@ -27,6 +27,11 @@ class Paginator
         return $repository->paginator($page, $this->itemPerPage);
     }
 
+    public function getItemListContent($repository, $page, $slug)
+    {
+        return $repository->paginator($page, $this->itemPerPage, $slug);
+    }
+
     public function countPage($items): int
     {
         return ceil(\count($items) / $this->itemPerPage);

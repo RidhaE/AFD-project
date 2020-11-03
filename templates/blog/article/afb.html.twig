@@ -1,0 +1,68 @@
+
+{% extends 'backoffice/layout-backoffice.html.twig' %}
+
+{% block body %}
+
+    {% set titlePage = 'backoffice.articles.list.title'|trans %}
+
+<div id="article-list" class="section">
+
+<h3>Fichier AFB-CFONB </h3>
+
+<hr style="width:50%;">
+
+ <div class="table-container">
+    <form action="{{ path('afb', {'slug': slug.id}) }}" method="post">
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="entete">Code de l'entete AFB160  </label>
+                    <input type="text" required class="form-control" id="entete" name="entete" placeholder="code de l'entete AFB160">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="numservice">Numero de souscription au service</label>
+                    <input type="text" required class="form-control" id="numservice" name="numservice" placeholder="Numeros de souscription au service">
+                </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <label for="nomentreprise">Nom de l'entreprise</label>
+                <input type="text" required class="form-control" id="nomentreprise" name="nomentreprise" placeholder="nom de l'entreprise">
+              </div>
+              <div class="form-group col-md-6">
+                    <label for="devise">Devise</label>
+                    <select id="devise" name="devise" required class="form-control">
+                        <option selected>Choose...</option>
+                        <option value="E">EUR - Euro</option>
+                        <option value="U">USD - US Dollar</option>
+                        <option value="G">GPB - Britsh Pound</option>
+                        <option value="X">XAF - Congo/Brazaville</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-row">
+    
+                <div class="form-group col-md-6">
+                    <label for="numcompteentreprise">Numero de compte</label>
+                    <input type="text" required class="form-control" id="numcompteentreprise" name="numcompteentreprise" placeholder="numeros de compte entreprise">
+                </div>
+                 <div class="form-group col-md-3">
+                    <label for="codeagence">Code agence  </label>
+                    <input type="text" required class="form-control" id="codeagence" name="codeagence" placeholder="Code agence">
+                </div>
+                <div class="form-group col-md-3">
+                    <label for="codebanque">Code banque</label>
+                    <input type="text" required class="form-control" id="codebanque" name="codebanque" placeholder="Code banque">
+                </div>
+            </div>
+          
+            <div class="control">
+                <button type="submit" class="button is-primary">Générer</button>
+            </div>
+    </form>
+  </div>
+
+
+  
+ </div>
+{% endblock %}
+

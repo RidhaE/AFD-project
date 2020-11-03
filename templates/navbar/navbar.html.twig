@@ -3,8 +3,7 @@
     <div class="container">
 
         <div class="navbar-brand">
-            <a href="{{ path('homepage') }}" class="navbar-item">Training Symfony-blog</a>
-
+            <a href="{{ path('homepage') }}" class="navbar-item"><img src="{{ asset('build/logo-esalaire.jpg') }}" alt="ACME logo"></a>
             <div class="button navbar-burger burger">
                 <span></span>
                 <span></span>
@@ -37,9 +36,9 @@
                     </div>
                 {% else %}
                     <a href="{{ path('login') }}" class="navbar-item navbar-action bold">
-                        {{ 'navbar.login'|trans }}
+                        {{ 'navbar.login'|trans }}  |
                     </a>
-                    <p class="navbar-item navbar-action">{{ 'generic.or'|trans }}</p>
+                  
                     <a href="{{ path('registration') }}" class="navbar-item navbar-action bold">
                         {{ 'navbar.signin'|trans }}
                     </a>

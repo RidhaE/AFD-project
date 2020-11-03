@@ -177,7 +177,7 @@ class User implements UserInterface, \Serializable
         $role = $this->role;
 
         if (empty($role)) {
-            $role[] = 'ROLE_USER';
+            $role[] = 'ROLE_ADMIN';
         }
 
         return array_unique($role);

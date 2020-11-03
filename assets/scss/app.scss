@@ -6,7 +6,16 @@
 
 // Import Bulma
 @import "./node_modules/bulma/bulma";
+// assets/css/global.scss
 
+// customize some Bootstrap variables
+ 
+@import "./node_modules/bootstrap/scss/functions";
+$sizes: (); // <-- Fix here
+@import "./node_modules/bootstrap/scss/variables";
+@import "./node_modules/bootstrap/scss/mixins";
+// the ~ allows you to reference things in node_modules
+@import "~bootstrap/scss/bootstrap";
 // Import Font-awesome
 @import "./node_modules/font-awesome/scss/font-awesome";
 

@@ -1,0 +1,72 @@
+
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+       <form action="{{ path('article_show', {'slug': contentFile.image.id}) }}" method="post">
+        <div class="modal-body">
+              <input type="hidden" value="{{ contentFile.id }}" name="id" />
+              <div class="form-group">
+                <label id="label1" for="nomprenom" {% if validatebyType('nomprenon',contentFile) == false %}  class="text-danger" {% endif %}>Nom & Prénom</label>
+                <input type="text" {% if validatebyType('nomprenon',contentFile) == true %} disabled  {% endif %} class="form-control {% if validatebyType('nomprenon',contentFile) == false %} is-invalid  {% endif %}" value="{{ contentFile.nomprenon }}" id="nomprenom" name="nomprenom" aria-describedby="Nom & prénom" placeholder="Nom & prénom">
+                {% if validatebyType('nomprenon',contentFile) == false %}
+                  <small id="nomprenomHelp" class="form-text text-info">Nom prénom doit être alphabétique et ne passe pas 24 caractères .</small>
+                {% endif %}
+              </div>
+
+              <div class="form-group">
+                <label id="label2"  for="codebanque" {% if validatebyType('codebancque',contentFile) == false %}  class="text-danger" {% endif %} >Code Banque</label>
+                <input type="text" {% if validatebyType('codebancque',contentFile) == true %} disabled  {% endif %} class="form-control {% if validatebyType('codebancque',contentFile) == false %} is-invalid  {% endif %}" value="{{ contentFile.codebancque }}" id="codebanque" name="codebanque" placeholder="Code banque">
+                 {% if validatebyType('codebancque',contentFile) == false %}
+                  <small id="codebancqueHelp" class="form-text text-info">Code banque doit être numérique et ne passe pas 5 nombres .</small>
+                 {% endif %}
+              </div>
+
+              <div class="form-group">
+                <label id="label3" for="codeguichet" {% if validatebyType('codeguichet',contentFile) == false %}  class="text-danger" {% endif %}>Code Guichet</label>
+                <input type="text" {% if validatebyType('codeguichet',contentFile) == true %} disabled  {% endif %} class="form-control {% if validatebyType('codeguichet',contentFile) == false %} is-invalid  {% endif %}" value="{{ contentFile.codeguichet }}" id="codeguichet" name="codeguichet" placeholder="Code guichet">
+                 {% if validatebyType('codeguichet',contentFile) == false %}
+                  <small id="codeguichetHelp" class="form-text text-info">Code guichet doit être numérique et ne passe pas 5 nombres .</small>
+                 {% endif %}
+              </div>
+
+              <div class="form-group">
+                <label id="label4"  for="numcompte" {% if validatebyType('numcompte',contentFile) == false %}  class="text-danger" {% endif %}>numéro Compte</label>
+                <input type="text" {% if validatebyType('numcompte',contentFile) == true %} disabled  {% endif %} class="form-control {% if validatebyType('numcompte',contentFile) == false %} is-invalid  {% endif %}" value="{{ contentFile.numcompte }}" id="numcompte" name="numcompte" placeholder="numéro Compte">
+                 {% if validatebyType('numcompte',contentFile) == false %}
+                  <small id="numcompteHelp" class="form-text text-info">Numéro Compte doit être numérique et ne passe pas 11 nombres .</small>
+                 {% endif %}
+             </div>
+
+              <div class="form-group">
+                <label id="label5" for="montant" {% if validatebyType('montant',contentFile) == false %}  class="text-danger" {% endif %}>Montant</label>
+                <input type="text" {% if validatebyType('montant',contentFile) == true %} disabled  {% endif %}  class="form-control {% if validatebyType('montant',contentFile) == false %} is-invalid  {% endif %}" value="{{ contentFile.montant }}" id="montant" name="montant" placeholder="Montant">
+                 {% if validatebyType('montant',contentFile) == false %}
+                  <small id="codegunumcompteichetHelp" class="form-text text-info">Montant doit être numérique et ne passe pas 16 nombres. </small>
+                 {% endif %}
+              </div>
+
+              <div class="form-group">
+                <label id="label6" for="motif" {% if validatebyType('motif',contentFile) == false %}  class="text-danger" {% endif %}>Motif</label>
+                <input type="text" {% if validatebyType('motif',contentFile) == true %} disabled  {% endif %} class="form-control {% if validatebyType('motif',contentFile) == false %} is-invalid  {% endif %}" value="{{ contentFile.motif }}" id="motif" name="motif" placeholder="Motif">
+                 {% if validatebyType('motif',contentFile) == false %}
+                  <small id="motifHelp" class="form-text text-info">Motif doit contenir au moins 32 caractères </small>
+                 {% endif %}
+              </div>
+            
+            
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-light" data-dismiss="modal">Fermer</button>
+          <button  type="submit" id="send" class="btn btn-success" >Valider</button>
+        </div>
+    </form>
+    </div>
+ {% block javascripts %}
+  
+ <script src="{{ asset('build/js/validate.js') }}"></script>
+  
+ {% endblock %}

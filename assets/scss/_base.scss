@@ -1,3 +1,6 @@
+html {
+  overflow-y: hidden;
+}
 .flex-co {
   flex-direction: column;
 }
@@ -27,7 +30,7 @@
 }
 
 .mt-30 {
-  margin-top: 30px;
+  margin-top: 100px !important;
 }
 
 .bold {
@@ -70,11 +73,18 @@ hr {
   .navbar-item {
     font-size: 18px;
   }
+  img {
+    width: 20.75rem;
+    max-height: 4rem !important;
+  
+  }
 }
 
 a.navbar-item:hover {
   background-color: transparent;
 }
+
+ 
 
 .input-focus {
   border-color: $blue-light;
@@ -88,5 +98,29 @@ a.navbar-item:hover {
 /** Font awesome size icons extension **/
 .fa-8x {
   font-size: 8em;
+}
+
+.navbar > .container .navbar-brand, .container > .navbar .navbar-brand {
+
+  margin-left: -22.75rem !important;
+}
+
+.navbar > .container .navbar-menu, .container > .navbar .navbar-menu {
+
+  margin-right: -18.75rem;
+}
+
+.control {
+  text-align: right !important;
+}
+
+.button  {
+  padding-right: 3.75em !important;
+  padding-left: 3.75em !important;
+}
+
+.table th, .table td {
+  padding:1em 1em !important
+
 }
 

@@ -1,0 +1,52 @@
+0302        000006       10080UMNG                    0000000                   X     2420110100000378                                               30015
+0602        000006000000000001ABA Serge               BCI                             01500372070509230000000000566097SALAIRE Septembre 2020         30015
+0602        000006000000000002ABIA MOUELENGA AugustineBCI                             01100372072316330000000000192966SALAIRE Septembre 2020         30015
+0602        000006000000000003ABIA NGOUANDOMBI RODIE  BCI                             01100372071266960000000000104436SALAIRE Septembre 2020         30015
+0802        000006                                                                                    0000000000863499
+                        
+
+
+
+
+Interpretation du fichier
+
+0302 -----------------  code de l'entete AFB160                           
+
+000006 ---------------- Numeros de souscription au service                        
+
+10080UMNG --------------30090SNPC  Date de valeur generation ficgier+ nom de l'entreprise
+
+0000000------------------ obligatoire
+
+X------------------------- code devise
+
+2420110100000378----------- code agence+ numeros de compte
+
+30015----------------------- code banque 
+    
+
+0602 ----------------------- c'est le code de l'entete chaque fichier doit commencé par 0302 apres c'est caracteres vide apres c
+ 
+000006 ---------------- Numeros de souscription au service
+                        
+000000000001-------------- refenrence insertion suite logique  
+
+ABIA MOUELENGA Augustine  --------- nom et prenom du saarié
+
+BCI------------------------------------------- nom de la banque
+
+0150037207050923---------------------------- code agence+ numeros de compte
+
+0000000000566097----------------------------- montant
+
+SALAIRE Septembre 2020------------------------ refenerence
+
+
+30015 ---------------------------------------- code banque
+
+0802------------------------------------------ calcul le total
+
+
+
+
+                                                                                                       

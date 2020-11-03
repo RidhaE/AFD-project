@@ -7,12 +7,7 @@
             <div class="border-form">
                 {% include('blog/security/login/_login_form.html.twig') %}
                 <div class="login-subtitle">
-                    <div class="mb-10">
-                        {{ 'login.login_with'|trans }} :
-                        <a href="{{ path('login_github') }}">
-                            <i class="fa fa-github fa-2x" aria-hidden="true"></i>
-                        </a>
-                    </div>
+                    
 
                     <a href="{{ path('password_reset_request') }}">{{ 'login.forgot_password'|trans }}</a><br/>
                     {{ 'login.not_registered'|trans }}

@@ -49,7 +49,7 @@ class Uploader
         }
     }
 
-    private function getTargetDir(): string
+    public function getTargetDir(): string
     {
         return $this->targetDir;
     }

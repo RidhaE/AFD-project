@@ -174,7 +174,7 @@ class LoginAuthenticator extends AbstractGuardAuthenticator
             $this->trans->trans('login.flashmessage_success')
         );
 
-        return new RedirectResponse($this->router->generate('homepage'));
+        return new RedirectResponse($this->router->generate('admin-dashboard'));
     }
 
     /**

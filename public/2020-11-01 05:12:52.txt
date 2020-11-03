@@ -1,0 +1,13 @@
+0302        000006    1110UMNG                0000000                          X      2420110100000378                                                30015
+0602        000000000001ABIA NGOUANDOMBI RODIE  BCI                             01100372071266960000000000SALAIRE Septembre 2020               30013
+0602        000000000002ABONGO ITOUA            BCI                             01500372072319360000000000SALAIRE Septembre 2020               30013
+0602        000000000003ABIA NGOUANDOMBI RODIE               BCI                             01100372071266960000000000SALAIRE Septembre 2020               30013
+0602        000000000004ABONGO ITOUA Joel       BCI                             01500372072319360000000000SALAIRE Septembre 2020               30013
+0602        000000000005ABIA NGOUANDOMBI RODIE               BCI                             01100372071266960000000000SALAIRE Septembre 2020               30013
+0602        000000000006ABONGO ITOUA Joel       BCI                             01500372072319360000000000SALAIRE Septembre 2020               30013
+0602        000000000007ABIA NGOUANDOMBI RODIE               BCI                             01100372071266960000000000SALAIRE Septembre 2020               30013
+0602        000000000008ABONGO ITOUA            BCI                             01500372072319360000000000SALAIRE Septembre 2020               30013
+0602        000000000009ABIA NGOUANDOMBI RODIE               BCI                             01100372071266960000000000SALAIRE Septembre 2020               30013
+0602        0000000000010ridha khemiri           BCI                             01500372072319360000000000SALAIRE Septembre 2020               30013
+0602        0000000000011ABIA NGOUANDOMBI RODIE               BCI                             01100372071266960000000000SALAIRE Septembre 2020               30013
+0602        0000000000012ABONGO-ITOUA            BCI                             01500372072319360000000000SALAIRE Septembre 2020               30013

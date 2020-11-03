@@ -41,6 +41,9 @@ class ArticleController extends AbstractController
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
+            //var_dump($article);
+
+            //die();
             $this->articleManager->create($article);
             $flashMessage->createMessage(
                 $request,

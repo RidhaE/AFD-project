@@ -12,41 +12,6 @@
         {{ form_errors(form) }}
 
         <span class="form-part">{{ 'backoffice.articles.add_edit_form.actuality'|trans }}</span>
-        <div class="field">
-            {{ form_label(form.title, 'backoffice.articles.add_edit_form.article_title'|trans, {'label_attr': {'class': 'label'}}) }}
-            <div class="control">
-                {{ form_widget(form.title, {'attr': {'class': 'input'}}) }}
-            </div>
-            <div class="help is-danger has-text-left">
-                {{ form_errors(form.title) }}
-            </div>
-        </div>
-
-        <div class="field">
-            {{ form_label(form.content, 'backoffice.articles.add_edit_form.article_content'|trans, {'label_attr': {'class': 'label'}}) }}
-            <div class="control">
-                {{ form_widget(form.content, {'attr': {'class': 'textarea'}}) }}
-            </div>
-            <div class="help is-danger has-text-left">
-                {{ form_errors(form.content) }}
-            </div>
-        </div>
-
-        <div class="field">
-            {{ form_label(form.tags, 'backoffice.articles.add_edit_form.article_tags'|trans, {'label_attr': {'class': 'label'}}) }}
-            <div class="control">
-                {{ form_widget(form.tags, {'attr': {'class': 'hidden-tag-input'}}) }}
-                <div class="tags">
-                    <input type="text" class="tag-input" name="app_tag_input" placeholder="Ajouter un tag">
-                </div>
-            </div>
-            <div class="help is-danger has-text-left">
-                {{ form_errors(form.tags) }}
-            </div>
-            <i>{{ 'backoffice.articles.add_edit_form.article_tags_helper'|trans }}</i>
-        </div>
-
-        <span class="form-part">{{ 'backoffice.articles.add_edit_form.article_media'|trans }}</span>
 
         <div class="field">
             {{ form_widget(form.image) }}
@@ -66,7 +31,4 @@
     </div>
 {% endblock %}
 
-{% block javascripts %}
-    {{ parent() }}
-    <script src="{{ asset('build/js/tags.js') }}"></script>
-{% endblock %}
+    

@@ -4,7 +4,8 @@ parameters:
     locale: 'en'
     image_articles_coverages_directory: '%kernel.project_dir%/public/uploads/articles/coverages/'
     image_articles_coverages_display: '/uploads/articles/coverages/'
-    itemperpage: 5
+    file_articles_coverages_display: '/uploads/files/'
+    itemperpage: 10
     supportedLocales:
         - en
         - fr
@@ -54,3 +55,5 @@ services:
     App\Services\Faker\Provider\EncodePasswordProvider:
         tags:
             - { name: nelmio_alice.faker.provider }
+
+ 
